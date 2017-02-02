@@ -3,6 +3,7 @@ const path = require('path');
 
 const port = process.env.PORT || 2000;
 const app = express();
+const { reqTrimmer } = require('./functions/reqTrimmer');
 
 app.use(express.static('public'));
 
@@ -11,14 +12,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/whoami', (req, res) => {
-  res.send({
-    software: req.headers['user-agent'],
-    language: req.headers['accept-language'],
-    ipaddress: req.ip,
-  });
+  let response = reqTrimmer(req);
+  res.send(response);
 });
-
-
 
 app.listen(port, () => {
   console.log(`Opening app on port ${port}`);

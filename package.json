@@ -10,7 +10,8 @@
   "author": "Sasha Korotkov",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "useragent": "^2.1.11"
   },
   "devDependencies": {
     "expect": "^1.20.2",
