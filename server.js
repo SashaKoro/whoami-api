@@ -20,7 +20,7 @@ app.get('/whoami', (req, res) => {
 
 
 
-app.listen(port, '127.0.0.1', () => {
+app.listen(port, () => {
   console.log(`Opening app on port ${port}`);
 });
 
