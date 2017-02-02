@@ -3,7 +3,6 @@ const useragent = require('useragent');
 const reqTrimmer = (req) => {
   let softwareRaw = useragent.parse(req.headers['user-agent']);
   let software = softwareRaw.os.toString();
-
   let languageRaw = req.headers['accept-language'];
   let language = languageRaw.split(',')[0];
 
