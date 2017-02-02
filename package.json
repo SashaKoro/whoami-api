@@ -1,0 +1,21 @@
+{
+  "name": "whoami-api",
+  "version": "1.0.0",
+  "description": "parses request header and give you back some info",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha test/*.test.js"
+  },
+  "author": "Sasha Korotkov",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  }
+}
